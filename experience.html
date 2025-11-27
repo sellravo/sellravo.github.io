@@ -3,12 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Sellravo • Where your dreams begin</title>
+
+  <!-- Basic SEO -->
+  <meta
+    name="description"
+    content="Sellravo offers curated collectibles and smart deals with clear photos, honest details, fair pricing, and reliable shipping."
+  />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://sellravo.store/experience" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Sellravo • Where your dreams begin" />
+  <meta property="og:description" content="Curated collectibles and smart deals, brought to you by Sellravo. Great finds, honest details, and shipping done right." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sellravo.store/experience" />
+  <meta property="og:image" content="https://sellravo.store/sellravo-img.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sellravo • Where your dreams begin" />
+  <meta name="twitter:description" content="Curated collectibles and smart deals with fair prices, reliable shipping, and friendly support." />
+  <meta name="twitter:image" content="https://sellravo.store/sellravo-img.png" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="https://sellravo.store/favico.ico" />
   <link rel="shortcut icon" type="image/x-icon" href="https://sellravo.store/favico.ico" />
 
+  <!-- Styles -->
   <style>
     :root {
       --bg-light: #f5f7fb;
@@ -256,7 +281,6 @@
       line-height: 1.6;
     }
 
-    /* smoother hover for why-list */
     .why-list span {
       display: inline-block;
       transition: color 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
@@ -276,7 +300,6 @@
       color: #9ca3af;
     }
 
-    /* ===== MOBILE LAYOUT FIX ===== */
     @media (max-width: 768px) {
       .page {
         padding: 20px 14px 48px;
@@ -306,7 +329,28 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Font Awesome (icons in header nav) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-oqR0bXJpLxS5xHfyvISfXfGfX+v9f6cnV1IvF9b1e7S6p8uW7mHc8B+z0BzLZ+WZ3G83p57Z0H0C0M8QdPw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sellravo",
+    "url": "https://sellravo.store",
+    "logo": "https://sellravo.store/sellravo-img.png",
+    "description": "Sellravo offers curated collectibles and smart deals with clear photos, fair prices, and reliable shipping.",
+    "sameAs": [
+      "https://www.ebay.com/usr/sellravo",
+      "https://instagram.com/sellravo",
+      "https://www.youtube.com/@sellravo",
+      "https://x.com/sellravo"
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -317,13 +361,24 @@
         <div class="brand-mark"></div>
         <div class="brand-name">Sellravo</div>
       </div>
-<nav class="nav-links">
-  <a href="https://instagram.com/sellravo"><i class="fa-brands fa-instagram"></i></a>
-  <a href="https://www.youtube.com/@sellravo"><i class="fa-brands fa-youtube"></i></a>
-  <a href="https://x.com/sellravo"><i class="fa-brands fa-x-twitter"></i></a>
-  <a href="https://www.ebay.com/usr/sellravo"><i class="fa-solid fa-cart-shopping"></i></a>
-  <a href="mailto:info@sellravo.store"><i class="fa-solid fa-circle-question"></i></a>
-</nav>
+
+      <nav class="nav-links" aria-label="Sellravo social and contact links">
+        <a href="https://instagram.com/sellravo" aria-label="Sellravo on Instagram" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/@sellravo" aria-label="Sellravo on YouTube" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://x.com/sellravo" aria-label="Sellravo on X" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://www.ebay.com/usr/sellravo" aria-label="Sellravo eBay store" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+        <a href="mailto:info@sellravo.store" aria-label="Contact Sellravo by email">
+          <i class="fa-solid fa-circle-question"></i>
+        </a>
+      </nav>
     </header>
 
     <main class="hero">
@@ -361,7 +416,7 @@
         <img
           src="https://sellravo.store/sellravo-img.png"
           class="logo-main"
-          alt="Sellravo Logo"
+          alt="Sellravo logo with tagline Where your dreams begin"
         />
 
         <div class="hero-tagline">Thoughtful finds. Honest prices.</div>
