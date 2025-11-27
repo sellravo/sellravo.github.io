@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sellravo • Where your dreams begin</title>
 
-  <link rel="icon" type="image/x-icon" href="/sellravo-favicon.ico">
-  <link rel="shortcut icon" type="image/x-icon" href="/sellravo-favicon.ico">
-  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/sellravo-favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="/sellravo-favicon.ico" />
+
   <style>
     :root {
       --bg-light: #f5f7fb;
@@ -28,8 +29,7 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: radial-gradient(circle at top, #ffffff 0, var(--bg-light) 55%, #e5edf8 100%);
       color: var(--text-main);
       min-height: 100vh;
@@ -37,7 +37,10 @@
       flex-direction: column;
     }
 
-    a { text-decoration: none; color: inherit; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
     .page {
       max-width: 1120px;
@@ -84,7 +87,9 @@
       color: var(--text-muted);
     }
 
-    .nav-links a:hover { color: #111827; }
+    .nav-links a:hover {
+      color: #111827;
+    }
 
     .hero {
       display: grid;
@@ -108,7 +113,10 @@
     }
 
     .dot {
-      width: 6px; height: 6px; border-radius: 999px; background: #22c55e;
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
     }
 
     .hero-title {
@@ -121,6 +129,7 @@
     .hero-highlight {
       background: linear-gradient(135deg, #ec4899, #6366f1);
       -webkit-background-clip: text;
+      background-clip: text;
       color: transparent;
     }
 
@@ -171,7 +180,7 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      transition: .2s;
+      transition: 0.2s;
     }
 
     .btn-ghost:hover {
@@ -179,7 +188,10 @@
       border-color: #94a3b8;
     }
 
-    .hero-note { font-size: 12px; color: #9ca3af; }
+    .hero-note {
+      font-size: 12px;
+      color: #9ca3af;
+    }
 
     .hero-card {
       background: radial-gradient(circle at top, #fdf2ff 0, #ffffff 40%, #e5edf8 100%);
@@ -194,26 +206,29 @@
     .hero-orbit {
       position: absolute;
       inset: -80px;
-      background: radial-gradient(circle at 15% 0, rgba(236, 72, 153, 0.35), transparent 55%),
-                  radial-gradient(circle at 85% 100%, rgba(59, 130, 246, 0.28), transparent 55%);
+      background:
+        radial-gradient(circle at 15% 0, rgba(236, 72, 153, 0.35), transparent 55%),
+        radial-gradient(circle at 85% 100%, rgba(59, 130, 246, 0.28), transparent 55%);
       opacity: 0;
       transition: opacity 0.4s ease;
     }
 
-    .hero-card:hover .hero-orbit { opacity: 1; }
+    .hero-card:hover .hero-orbit {
+      opacity: 1;
+    }
 
     .logo-main {
       width: 200px;
       height: auto;
-      z-index: 2;
       position: relative;
-      filter: drop-shadow(0 6px 15px rgba(0,0,0,0.18));
-      transition: .25s;
+      z-index: 2;
+      filter: drop-shadow(0 6px 15px rgba(0, 0, 0, 0.18));
+      transition: 0.25s;
     }
 
     .hero-card:hover .logo-main {
       transform: scale(1.05);
-      filter: drop-shadow(0 12px 28px rgba(0,0,0,0.28));
+      filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.28));
     }
 
     .hero-tagline {
@@ -223,7 +238,7 @@
     }
 
     section {
-      background: #fff;
+      background: #ffffff;
       border-radius: var(--radius-lg);
       padding: 24px;
       box-shadow: 0 14px 36px rgba(15, 23, 42, 0.12);
@@ -258,7 +273,7 @@
         <div class="brand-mark"></div>
         <div class="brand-name">Sellravo</div>
       </div>
-      <nav class="nav-links">        
+      <nav class="nav-links">
         <a href="https://www.ebay.com/usr/sellravo">Shop</a>
         <a href="mailto:info@sellravo.store?subject=Order%20Issue&body=Hi%2C%20I%20need%20help%20with%20my%20order.">Help</a>
       </nav>
@@ -281,7 +296,7 @@
         </p>
 
         <div class="hero-actions">
-          <a href="https://www.ebay.com/usr/sellravo" target="_blank">
+          <a href="https://www.ebay.com/usr/sellravo" target="_blank" rel="noopener noreferrer">
             <button class="btn-primary">Visit eBay Store ↗</button>
           </a>
 
@@ -296,8 +311,11 @@
       <div class="hero-card">
         <div class="hero-orbit"></div>
 
-        <!-- ⭐ Your new LOGO -->
-        <img src="https://sellravo.store/sellravo-img.png" class="logo-main" alt="Sellravo Logo">
+        <img
+          src="https://sellravo.store/sellravo-img.png"
+          class="logo-main"
+          alt="Sellravo Logo"
+        />
 
         <div class="hero-tagline">Thoughtful finds. Honest prices.</div>
       </div>
@@ -306,16 +324,17 @@
     <section id="about">
       <h2 class="section-title">About Sellravo</h2>
       <p class="section-text">
-        Sellravo was created from a genuine passion for collecting and discovering standout pieces. 
-        What began as a hobby became a curated marketplace where every item is carefully selected, clearly described, fairly priced, and shipped with the same attention and enthusiasm as day one.
+        Sellravo was created from a genuine passion for collecting and discovering standout pieces.
+        What began as a hobby became a curated marketplace where every item is carefully selected,
+        clearly described, fairly priced, and shipped with the same attention and enthusiasm as day one.
       </p>
     </section>
 
     <section id="why">
       <h2 class="section-title">Why people buy from Sellravo</h2>
       <p class="section-text">
-        • Clear photos and straightforward descriptions <br>
-        • Reliable, secure packaging and quick shipping <br>
+        • Clear photos and straightforward descriptions <br />
+        • Reliable, secure packaging and quick shipping <br />
         • Fair pricing and friendly, real support
       </p>
     </section>
@@ -325,8 +344,8 @@
       <p class="section-text">
         Find new treasures and great picks.
       </p>
-      <br>
-      <a href="https://www.ebay.com/usr/sellravo" target="_blank">
+      <br />
+      <a href="https://www.ebay.com/usr/sellravo" target="_blank" rel="noopener noreferrer">
         <button class="btn-primary">Open eBay Store ↗</button>
       </a>
     </section>
