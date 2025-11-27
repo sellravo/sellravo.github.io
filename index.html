@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sellravo</title>
-  
-  <link rel="icon" type="image/x-icon" href="/sellravo-favicon.ico">
-  <link rel="shortcut icon" type="image/x-icon" href="/sellravo-favicon.ico">
-  
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/sellravo-favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="/sellravo-favicon.ico" />
+
   <style>
     :root {
       --accent-pink: #ec4899;
@@ -17,9 +18,9 @@
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
@@ -28,8 +29,7 @@
       justify-content: center;
       align-items: center;
       font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background:
-        radial-gradient(circle at top, #ffffff 0, #eef2ff 40%, #e5edf8 100%);
+      background: radial-gradient(circle at top, #ffffff 0%, #eef2ff 40%, #e5edf8 100%);
     }
 
     .container {
@@ -41,7 +41,7 @@
       display: inline-flex;
       flex-direction: column;
       align-items: center;
-      padding: 28px 32px 26px;
+      padding: 28px 32px;
       border-radius: 28px;
       background: rgba(255, 255, 255, 0.9);
       box-shadow: 0 18px 45px rgba(15, 23, 42, 0.22);
@@ -65,10 +65,10 @@
     .logo {
       width: 360px;
       max-width: 80vw;
-      height: auto;
       cursor: pointer;
-      filter: drop-shadow(0 6px 18px rgba(15, 23, 42, 0.25));
+      height: auto;
       transition: transform 0.22s ease, filter 0.22s ease;
+      filter: drop-shadow(0 6px 18px rgba(15, 23, 42, 0.25));
     }
 
     .card:hover .logo {
