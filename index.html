@@ -3,7 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sellravo</title>
+
+  <title>Sellravo • Curated collectibles & smart deals</title>
+
+  <!-- Basic SEO -->
+  <meta
+    name="description"
+    content="Sellravo offers curated collectibles and smart deals with fair prices, reliable shipping, and friendly customer support."
+  />
+
+  <!-- Open Graph / Social preview -->
+  <meta property="og:title" content="Sellravo • Curated collectibles & smart deals" />
+  <meta property="og:description" content="Great finds, honest details, and shipping done right." />
+  <meta property="og:image" content="https://sellravo.store/sellravo-img.png" />
+  <meta property="og:url" content="https://sellravo.store" />
+  <meta property="og:type" content="website" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="https://sellravo.store/favico.ico" />
@@ -30,11 +44,32 @@
       align-items: center;
       font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background: radial-gradient(circle at top, #ffffff 0%, #eef2ff 40%, #e5edf8 100%);
+      color: var(--text-main);
     }
 
     .container {
       text-align: center;
       padding: 24px;
+    }
+
+    /* Top minimal nav with icons */
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 18px;
+      font-size: 18px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      transition: transform 0.18s ease, color 0.18s ease;
+    }
+
+    .nav-links a:hover {
+      transform: translateY(-1px);
+      color: var(--accent-blue);
     }
 
     .card {
@@ -92,24 +127,72 @@
       font-size: 14px;
       color: var(--text-muted);
     }
+
+    /* Text link for accessibility / SEO */
+    .primary-link {
+      margin-top: 14px;
+      font-size: 13px;
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+
+    .primary-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 20px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
+
+    <!-- Minimal icon nav for legitimacy + quick access -->
+    <nav class="nav-links" aria-label="Sellravo social links">
+      <a href="https://instagram.com/sellravo" aria-label="Sellravo on Instagram">📷</a>
+      <a href="https://www.youtube.com/@sellravo" aria-label="Sellravo on YouTube">▶️</a>
+      <a href="https://x.com/sellravo" aria-label="Sellravo on X">𝕏</a>
+      <a href="https://www.ebay.com/usr/sellravo" aria-label="Sellravo eBay store">🛒</a>
+      <a href="mailto:info@sellravo.store" aria-label="Contact Sellravo by email">✉️</a>
+    </nav>
+
     <div class="card">
       <div class="badge">Explore ↗</div>
 
-      <a href="https://sellravo.store/experience">
+      <a href="https://sellravo.store/experience" aria-label="Enter Sellravo experience page">
         <img
           src="https://sellravo.store/sellravo-img.png"
-          alt="Sellravo Logo"
+          alt="Sellravo logo and tagline"
           class="logo"
         />
       </a>
 
       <div class="tagline">Elevate your experience</div>
       <div class="subtagline">Great finds, honest details, and shipping done right.</div>
+
+      <!-- Text link helps SEO + accessibility -->
+      <a href="https://sellravo.store/experience" class="primary-link">
+        Learn more about Sellravo →
+      </a>
+    </div>
+
+    <div class="footer">
+      © 2025 Sellravo. All rights reserved. ·
+      <a href="mailto:info@sellravo.store">info@sellravo.store</a>
     </div>
   </div>
 </body>
