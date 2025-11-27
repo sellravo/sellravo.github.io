@@ -6,63 +6,108 @@
   <title>Sellravo</title>
 
   <style>
-    body {
+    :root {
+      --accent-pink: #ec4899;
+      --accent-blue: #6366f1;
+      --text-main: #0f172a;
+      --text-muted: #6b7280;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    body {
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-family: "Segoe UI", sans-serif;
-      background: linear-gradient(135deg, #ffffff, #f3f6f9);
-      transition: background 0.5s ease;
+      font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background:
+        radial-gradient(circle at top, #ffffff 0, #eef2ff 40%, #e5edf8 100%);
     }
 
     .container {
       text-align: center;
+      padding: 24px;
+    }
+
+    .card {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 28px 32px 26px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.22);
+      backdrop-filter: blur(10px);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 26px 60px rgba(15, 23, 42, 0.32);
+    }
+
+    .badge {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 14px;
     }
 
     .logo {
-      width: 490px;
+      width: 360px;
+      max-width: 80vw;
       height: auto;
       cursor: pointer;
-      transition: transform 0.25s ease, filter 0.3s ease;
-      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+      filter: drop-shadow(0 6px 18px rgba(15, 23, 42, 0.25));
+      transition: transform 0.22s ease, filter 0.22s ease;
     }
 
-    .logo:hover {
-      transform: scale(1.07);
-      filter: drop-shadow(0 6px 22px rgba(0,0,0,0.35));
+    .card:hover .logo {
+      transform: translateY(-2px) scale(1.02);
+      filter: drop-shadow(0 10px 28px rgba(15, 23, 42, 0.35));
     }
 
     .tagline {
       margin-top: 20px;
-      font-size: 32px;
+      font-size: 26px;
       font-weight: 700;
-      letter-spacing: 0.4px;
-      background: linear-gradient(135deg, #ec4899, #6366f1);
+      letter-spacing: 0.02em;
+      background: linear-gradient(135deg, var(--accent-pink), var(--accent-blue));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      opacity: 1;
+    }
+
+    .subtagline {
+      margin-top: 6px;
+      font-size: 14px;
+      color: var(--text-muted);
     }
   </style>
 </head>
 
 <body>
-
   <div class="container">
+    <div class="card">
+      <div class="badge">Sellravo</div>
 
-    <a href="https://sellravo.github.io/experience.html">
-      <img src="https://i.imgur.com/rKFDTIL.png"
-           alt="Sellravo Logo"
-           class="logo">
-    </a>
+      <a href="https://sellravo.github.io/experience.html">
+        <img
+          src="https://i.imgur.com/rKFDTIL.png"
+          alt="Sellravo Logo"
+          class="logo"
+        />
+      </a>
 
-    <div class="tagline">Elevate your experience</div>
-
+      <div class="tagline">Elevate your experience</div>
+      <div class="subtagline">Curated finds, clean design, and a smoother way to shop.</div>
+    </div>
   </div>
-
 </body>
 </html>
