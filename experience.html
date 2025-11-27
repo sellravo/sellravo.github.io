@@ -112,6 +112,12 @@
       color: var(--text-muted);
     }
 
+    .nav-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     .nav-links a:hover {
       color: #111827;
     }
@@ -331,8 +337,13 @@
   </style>
 
   <!-- Font Awesome (icons in header nav) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-oqR0bXJpLxS5xHfyvISfXfGfX+v9f6cnV1IvF9b1e7S6p8uW7mHc8B+z0BzLZ+WZ3G83p57Z0H0C0M8QdPw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-oqR0bXJpLxS5xHfyvISfXfGfX+v9f6cnV1IvF9b1e7S6p8uW7mHc8B+z0BzLZ+WZ3G83p57Z0H0C0M8QdPw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 
   <!-- Structured data for SEO -->
   <script type="application/ld+json">
@@ -364,19 +375,19 @@
 
       <nav class="nav-links" aria-label="Sellravo social and contact links">
         <a href="https://instagram.com/sellravo" aria-label="Sellravo on Instagram" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
         </a>
         <a href="https://www.youtube.com/@sellravo" aria-label="Sellravo on YouTube" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-youtube" aria-hidden="true"></i>
         </a>
         <a href="https://x.com/sellravo" aria-label="Sellravo on X" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
         </a>
         <a href="https://www.ebay.com/usr/sellravo" aria-label="Sellravo eBay store" target="_blank" rel="noopener noreferrer">
-          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
         </a>
         <a href="mailto:info@sellravo.store" aria-label="Contact Sellravo by email">
-          <i class="fa-solid fa-circle-question"></i>
+          <i class="fa-solid fa-circle-question" aria-hidden="true"></i>
         </a>
       </nav>
     </header>
