@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sellravo</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #ffffff, #f3f6f9);
+      transition: background 0.5s ease;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .logo {
+      width: 190px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.25s ease, filter 0.3s ease;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+    }
+
+    .logo:hover {
+      transform: scale(1.07);
+      filter: drop-shadow(0 6px 22px rgba(0,0,0,0.35));
+    }
+
+    /* Background animation when hovering logo */
+    .logo:hover ~ .bg-shift {
+      background: linear-gradient(135deg, #ffffff, #d9e7ff);
+    }
+
+    /* Tagline */
+    .tagline {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #3b3b3b;
+      opacity: 0.85;
+      letter-spacing: 0.5px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <img src="https://i.imgur.com/rKFDTIL.png"
+         alt="Sellravo Logo"
+         class="logo">
+
+    <div class="tagline">Where your dreams begin.</div>
+  </div>
+
+</body>
+</html>
