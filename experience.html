@@ -256,17 +256,17 @@
       line-height: 1.6;
     }
 
-    /* -------------------------- */
-    /* HOVER BOLD EFFECT ADDED   */
-    /* -------------------------- */
+    /* smoother hover for why-list */
     .why-list span {
-      transition: 0.15s ease;
       display: inline-block;
+      transition: color 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
+      opacity: 0.9;
     }
 
     .why-list span:hover {
-      font-weight: 600;
       color: #111827;
+      transform: translateX(2px);
+      opacity: 1;
     }
 
     footer {
@@ -274,6 +274,36 @@
       font-size: 12px;
       padding: 20px;
       color: #9ca3af;
+    }
+
+    /* ===== MOBILE LAYOUT FIX ===== */
+    @media (max-width: 768px) {
+      .page {
+        padding: 20px 14px 48px;
+        gap: 40px;
+      }
+
+      header {
+        align-items: center;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .hero-text {
+        max-width: 100%;
+      }
+
+      .hero-card {
+        margin-top: 4px;
+        padding: 22px;
+      }
+
+      .logo-main {
+        width: 160px;
+      }
     }
   </style>
 </head>
