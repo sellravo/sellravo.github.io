@@ -304,6 +304,26 @@
       opacity: 1;
     }
 
+    /* Minimal links row for "More about Sellravo" */
+    .info-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 12px;
+    }
+
+    .info-link {
+      font-size: 14px;
+      color: #1f2937;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 2px;
+    }
+
+    .info-link:hover {
+      color: #111827;
+      border-bottom-color: #9ca3b8;
+    }
+
     footer {
       text-align: center;
       font-size: 12px;
@@ -469,22 +489,16 @@
       </a>
     </section>
 
-    <!-- New: entry point for future trust pages -->
+    <!-- Minimal, professional links to future trust pages -->
     <section id="more-info">
       <h2 class="section-title">More about Sellravo</h2>
       <p class="section-text">
         Learn more about our policies and how to reach us.
       </p>
-      <div class="hero-actions">
-        <a href="/contact">
-          <button class="btn-ghost">Contact & Business Info</button>
-        </a>
-        <a href="/policies">
-          <button class="btn-ghost">Shipping & Returns</button>
-        </a>
-        <a href="/legal">
-          <button class="btn-ghost">Privacy & Terms</button>
-        </a>
+      <div class="info-links">
+        <a href="/contact" class="info-link">Contact &amp; Business Info</a>
+        <a href="/policies" class="info-link">Shipping &amp; Returns</a>
+        <a href="/legal" class="info-link">Privacy &amp; Terms</a>
       </div>
     </section>
 
