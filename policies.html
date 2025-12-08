@@ -1,80 +1,104 @@
+Here’s the same page code with **only the “Experience”** button kept in the nav (no “Contact & Business Info”), nothing else changed:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Legal • Sellravo</title>
+  <title>Shipping & Returns • Sellravo</title>
 
   <!-- Basic SEO -->
   <meta
     name="description"
-    content="Privacy policy and terms of use for Sellravo. Learn how we handle data, user rights, and site terms."
+    content="Learn how Sellravo handles shipping, delivery times, and returns."
   />
   <meta name="robots" content="index,follow" />
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://sellravo.store/legal" />
+  <link rel="canonical" href="https://sellravo.store/shipping" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Legal • Sellravo" />
-  <meta property="og:description" content="Privacy policy and terms of use for Sellravo." />
+  <meta property="og:title" content="Shipping & Returns • Sellravo" />
+  <meta property="og:description" content="Details on shipping, delivery, and returns for Sellravo orders." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sellravo.store/legal" />
+  <meta property="og:url" content="https://sellravo.store/shipping" />
   <meta property="og:image" content="https://sellravo.store/sellravo-img.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Legal • Sellravo" />
-  <meta name="twitter:description" content="Privacy policy and terms of use for Sellravo." />
+  <meta name="twitter:title" content="Shipping & Returns • Sellravo" />
+  <meta name="twitter:description" content="How shipping and returns work at Sellravo." />
   <meta name="twitter:image" content="https://sellravo.store/sellravo-img.png" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="https://sellravo.store/favico.ico" />
   <link rel="shortcut icon" type="image/x-icon" href="https://sellravo.store/favico.ico" />
 
+  <!-- Styles (same base style as other pages) -->
   <style>
     :root {
       --bg-light: #f5f7fb;
+      --bg-dark: #0b1020;
+      --accent-pink: #ec4899;
+      --accent-navy: #111827;
       --text-main: #0f172a;
       --text-muted: #6b7280;
       --card: #ffffff;
       --radius-lg: 24px;
+      --shadow-lg: 0 18px 45px rgba(15, 23, 42, 0.18);
     }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg-light);
+      background: radial-gradient(circle at top, #ffffff 0, var(--bg-light) 55%, #e5edf8 100%);
       color: var(--text-main);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
+
     a {
       text-decoration: none;
       color: inherit;
     }
+
     .page {
       max-width: 1120px;
       margin: 0 auto;
       padding: 24px 16px 64px;
+      width: 100%;
       display: flex;
       flex-direction: column;
       gap: 40px;
     }
+
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 16px;
     }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
     .brand-logo {
       width: 27px;
       height: 27px;
+      object-fit: contain;
     }
+
     .brand-name {
       font-weight: 700;
       letter-spacing: 0.14em;
@@ -82,17 +106,25 @@
       text-transform: uppercase;
       color: #111827;
     }
+
     .nav-links {
       display: flex;
       gap: 18px;
       font-size: 14px;
       color: var(--text-muted);
+      align-items: center;
     }
+
     .nav-links a {
       display: inline-flex;
       align-items: center;
       justify-content: center;
     }
+
+    .nav-links a:hover {
+      color: #111827;
+    }
+
     .nav-text-link {
       font-size: 13px;
       padding: 4px 10px;
@@ -100,12 +132,15 @@
       border: 1px solid rgba(148, 163, 184, 0.5);
       margin-right: 8px;
     }
+
     .nav-text-link:hover {
       background: rgba(148, 163, 184, 0.1);
     }
+
     .page-title-block {
       padding-top: 8px;
     }
+
     .page-label {
       display: inline-flex;
       align-items: center;
@@ -119,29 +154,63 @@
       color: #4b5563;
       margin-bottom: 14px;
     }
+
     .page-title {
       font-size: clamp(26px, 3.4vw, 32px);
       font-weight: 700;
       color: #020617;
       margin-bottom: 6px;
     }
-    .section {
-      background: var(--card);
+
+    .page-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 520px;
+      line-height: 1.6;
+    }
+
+    section {
+      background: #ffffff;
       border-radius: var(--radius-lg);
       padding: 24px;
       box-shadow: 0 14px 36px rgba(15, 23, 42, 0.12);
     }
+
     .section-title {
       font-size: 18px;
       margin-bottom: 10px;
       font-weight: 600;
     }
+
     .section-text {
       font-size: 15px;
       color: var(--text-muted);
       line-height: 1.6;
-      margin-bottom: 12px;
     }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 24px;
+    }
+
+    .info-item {
+      margin-bottom: 10px;
+    }
+
+    .info-label {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #9ca3af;
+      margin-bottom: 2px;
+    }
+
+    .info-value {
+      font-size: 15px;
+      color: #111827;
+    }
+
     ul {
       margin-left: 18px;
       margin-top: 6px;
@@ -149,66 +218,147 @@
       font-size: 14px;
       line-height: 1.6;
     }
+
     footer {
       text-align: center;
       font-size: 12px;
       padding: 20px;
       color: #9ca3af;
     }
+
     @media (max-width: 768px) {
       .page {
         padding: 20px 14px 48px;
         gap: 32px;
       }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 </head>
+
 <body>
   <div class="page">
+
     <header>
       <div class="brand">
-        <img src="https://sellravo.store/sellravo-logo.png" alt="Sellravo logo" class="brand-logo" />
+        <img src="https://sellravo.store/sellravo-logo.png" 
+             alt="Sellravo logo" 
+             class="brand-logo" />
         <div class="brand-name">Explore Sellravo</div>
       </div>
 
-      <nav class="nav-links" aria-label="Navigation">
+      <nav class="nav-links" aria-label="Sellravo navigation and social links">
         <a href="/experience" class="nav-text-link">Experience</a>
-        <a href="/contact" class="nav-text-link">Contact</a>
-        <a href="/shipping" class="nav-text-link">Shipping & Returns</a>
+
+        <a href="https://instagram.com/sellravo" aria-label="Sellravo on Instagram" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/@sellravo" aria-label="Sellravo on YouTube" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://x.com/sellravo" aria-label="Sellravo on X" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://www.ebay.com/usr/sellravo" aria-label="Sellravo eBay store" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
       </nav>
     </header>
 
     <div class="page-title-block">
-      <div class="page-label">Legal</div>
-      <h1 class="page-title">Privacy & Terms</h1>
+      <div class="page-label">Shipping &amp; Returns</div>
+      <h1 class="page-title">Shipping &amp; returns at Sellravo</h1>
+      <p class="page-subtitle">
+        A quick overview of how we ship orders and handle returns.
+      </p>
     </div>
 
-    <section class="section">
-      <h2 class="section-title">Privacy Policy</h2>
-      <p class="section-text">
-        We value your privacy. Sellravo does not sell or share your personal information. We only collect the data necessary to process orders and communicate with you.
-      </p>
-      <p class="section-text">
-        We use secure third-party payment processors (e.g. the marketplace platform) to handle payments. We do not store full credit card information on our servers.
-      </p>
-      <p class="section-text">
-        If you contact us, we retain email correspondence related to your inquiry or order for internal record-keeping and customer service purposes.
-      </p>
+    <section>
+      <div class="info-grid">
+        <!-- Shipping -->
+        <div>
+          <h2 class="section-title">Shipping</h2>
+
+          <div class="info-item">
+            <div class="info-label">Handling time</div>
+            <div class="info-value">
+              Most orders ship within 1 business day.
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-label">Carriers</div>
+            <div class="info-value">
+              USPS and UPS with tracking on every package.
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-label">Shipping area</div>
+            <div class="info-value">
+              Currently shipping within the United States.
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-label">Packaging</div>
+            <div class="info-value">
+              Protective packing designed for collectibles and fragile items.
+            </div>
+          </div>
+        </div>
+
+        <!-- Returns -->
+        <div>
+          <h2 class="section-title">Returns &amp; refunds</h2>
+
+          <p class="section-text">
+            We aim to keep returns simple and fair.
+          </p>
+          <ul>
+            <li>Most items can be returned within 30 days of delivery.</li>
+            <li>Items should be returned in the same condition as received.</li>
+            <li>
+              If an item arrives damaged or not as described, we work with you to
+              make it right.
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section class="section">
-      <h2 class="section-title">Terms of Use</h2>
+    <section>
+      <h2 class="section-title">Damaged or incorrect items</h2>
       <p class="section-text">
-        By using this website (the “Site”) and/or buying from Sellravo, you agree to the following terms:
+        If there is a problem with your order, please contact us first so we can
+        review and help.
       </p>
       <ul>
-        <li>You must be at least 18 years old to make a purchase.</li>
-        <li>All listed prices include applicable fees and charges—what you see is what you pay (excluding shipping, if any).</li>
-        <li>You agree to provide accurate information when you place an order.</li>
-        <li>We cannot guarantee availability until the order is paid and confirmed.</li>
-        <li>Items are shipped to the address you provide; we are not responsible for incorrect or delayed delivery due to your error.</li>
-        <li>Sellravo reserves the right to refuse or cancel orders at its discretion.</li>
-        <li>Sellravo is not liable for indirect damages or losses; liability is limited to the purchase amount for the item(s).</li>
+        <li>Contact us with your order number and a brief description.</li>
+        <li>Photos of the item and packaging help us resolve the issue faster.</li>
+        <li>When appropriate, we may provide return instructions or a replacement.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="section-title">How to start a return</h2>
+      <p class="section-text">
+        Returns are usually started through the same marketplace where you placed
+        the order.
+      </p>
+      <ul>
+        <li>Open your order on eBay and select the return or message option.</li>
+        <li>Choose the reason and add a short note if needed.</li>
+        <li>We reply with next steps and keep you updated until the case is closed.</li>
       </ul>
     </section>
 
@@ -223,3 +373,4 @@
   </script>
 </body>
 </html>
+```
