@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sellravo • Curated collectibles & smart deals</title>
+
+  <!-- Basic SEO -->
+  <meta
+    name="description"
+    content="Sellravo offers curated collectibles and smart deals with fair prices, reliable shipping, and friendly customer support."
+  />
+
+  <!-- Open Graph / Social preview -->
+  <meta property="og:title" content="Sellravo • Curated collectibles & smart deals" />
+  <meta property="og:description" content="Great finds, honest details, and shipping done right." />
+  <meta property="og:image" content="https://sellravo.store/sellravo-img.png" />
+  <meta property="og:url" content="https://sellravo.store" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="https://sellravo.store/favico.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://sellravo.store/favico.ico" />
+
+  <style>
+    :root {
+      --accent-pink: #ec4899;
+      --accent-blue: #6366f1;
+      --text-main: #0f172a;
+      --text-muted: #6b7280;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #ffffff 0%, #eef2ff 40%, #e5edf8 100%);
+      color: var(--text-main);
+    }
+
+    .container {
+      text-align: center;
+      padding: 24px;
+    }
+
+    /* Top minimal nav with icons */
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 18px;
+      font-size: 18px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      transition: transform 0.18s ease, color 0.18s ease;
+    }
+
+    .nav-links a:hover {
+      transform: translateY(-1px);
+      color: var(--accent-blue);
+    }
+
+    .card {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 28px 40px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.22);
+      backdrop-filter: blur(10px);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 26px 60px rgba(15, 23, 42, 0.32);
+    }
+
+    .badge {
+      font-size: 11.6px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .logo {
+      width: 350px;
+      max-width: 80vw;
+      cursor: pointer;
+      height: auto;
+      transition: transform 0.22s ease, filter 0.22s ease;
+      filter: drop-shadow(0 6px 18px rgba(15, 23, 42, 0.25));
+    }
+
+    .card:hover .logo {
+      transform: translateY(-2px) scale(1.02);
+      filter: drop-shadow(0 10px 28px rgba(15, 23, 42, 0.35));
+    }
+
+    .tagline {
+      margin-top: 14px;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      background: linear-gradient(135deg, var(--accent-pink), var(--accent-blue));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subtagline {
+      margin-top: 4px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* Text link for accessibility / SEO */
+    .primary-link {
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+
+    .primary-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Telegram button */
+    .telegram-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      margin-top: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-main);
+      background: #f3f6ff;
+      border: 1px solid #d5ddf7;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .telegram-btn i {
+      color: #2AABEE; /* Telegram blue */
+      font-size: 16px;
+      transition: color 0.25s ease;
+    }
+
+    .telegram-btn:hover {
+      background: #2AABEE;
+      border-color: #2AABEE;
+      color: #ffffff;
+    }
+
+    .telegram-btn:hover i {
+      color: #ffffff;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 20px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <!-- Font Awesome for nav icons (no integrity to avoid blocking) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Minimal icon nav for legitimacy + quick access -->
+    <nav class="nav-links" aria-label="Sellravo social links">
+      <a href="https://instagram.com/sellravo" aria-label="Sellravo on Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://www.youtube.com/@sellravo" aria-label="Sellravo on YouTube">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+      <a href="https://x.com/sellravo" aria-label="Sellravo on X">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a href="https://www.ebay.com/usr/sellravo" aria-label="Sellravo eBay store">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+      <a href="mailto:info@sellravo.store" aria-label="Contact Sellravo by email">
+        <i class="fa-solid fa-circle-question"></i>
+      </a>
+    </nav>
+
+    <div class="card">
+      <div class="badge">Explore ↗</div>
+
+      <a href="https://sellravo.store/experience" aria-label="Enter Sellravo experience page">
+        <img
+          src="https://sellravo.store/sellravo-img.png"
+          alt="Sellravo logo and tagline"
+          class="logo"
+        />
+      </a>
+
+      <div class="tagline">Elevate your experience</div>
+      <div class="subtagline">Great finds, honest details, and shipping done right.</div>
+
+      <!-- Text link helps SEO + accessibility -->
+      <a href="https://sellravo.store/experience" class="primary-link">
+        Learn more about Sellravo →
+      </a>
+
+      <!-- Telegram button -->
+      <a href="https://t.me/sellravo" target="_blank" class="telegram-btn">
+        <i class="fa-brands fa-telegram"></i>
+        Send a Message
+      </a>
+    </div>
+
+    <div class="footer">
+      © 2025 Sellravo. All rights reserved. ·
+      <a href="mailto:info@sellravo.store">info@sellravo.store</a>
+    </div>
+  </div>
+</body>
+</html>
