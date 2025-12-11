@@ -27,6 +27,7 @@
     :root {
       --accent-pink: #ec4899;
       --accent-blue: #6366f1;
+      --telegram-blue: #2AABEE;
       --text-main: #0f172a;
       --text-muted: #6b7280;
     }
@@ -128,7 +129,6 @@
       color: var(--text-muted);
     }
 
-    /* Text link for accessibility / SEO */
     .primary-link {
       margin-top: 10px;
       font-size: 13px;
@@ -140,37 +140,37 @@
       text-decoration: underline;
     }
 
-    /* Telegram button */
-    .telegram-btn {
+    /* NEW — Telegram Button (matches your screenshot) */
+    .telegram-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 10px 18px;
-      margin-top: 12px;
+      padding: 10px 20px;
+      margin-top: 14px;
       font-size: 14px;
       font-weight: 500;
       color: var(--text-main);
-      background: #f3f6ff;
-      border: 1px solid #d5ddf7;
+      background: #eaf1ff;
+      border: 1px solid #d3dcf7;
       border-radius: 999px;
       text-decoration: none;
       transition: all 0.25s ease;
     }
 
-    .telegram-btn i {
-      color: #2AABEE; /* Telegram blue */
-      font-size: 16px;
+    .telegram-pill i {
+      font-size: 17px;
+      color: var(--telegram-blue);
       transition: color 0.25s ease;
     }
 
-    .telegram-btn:hover {
-      background: #2AABEE;
-      border-color: #2AABEE;
-      color: #ffffff;
+    .telegram-pill:hover {
+      background: var(--telegram-blue);
+      border-color: var(--telegram-blue);
+      color: white;
     }
 
-    .telegram-btn:hover i {
-      color: #ffffff;
+    .telegram-pill:hover i {
+      color: white;
     }
 
     /* Footer */
@@ -190,7 +190,7 @@
     }
   </style>
 
-  <!-- Font Awesome for nav icons (no integrity to avoid blocking) -->
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -200,49 +200,34 @@
 <body>
   <div class="container">
 
-    <!-- Minimal icon nav for legitimacy + quick access -->
-    <nav class="nav-links" aria-label="Sellravo social links">
-      <a href="https://instagram.com/sellravo" aria-label="Sellravo on Instagram">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-      <a href="https://www.youtube.com/@sellravo" aria-label="Sellravo on YouTube">
-        <i class="fa-brands fa-youtube"></i>
-      </a>
-      <a href="https://x.com/sellravo" aria-label="Sellravo on X">
-        <i class="fa-brands fa-x-twitter"></i>
-      </a>
-      <a href="https://www.ebay.com/usr/sellravo" aria-label="Sellravo eBay store">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </a>
-      <a href="mailto:info@sellravo.store" aria-label="Contact Sellravo by email">
-        <i class="fa-solid fa-circle-question"></i>
-      </a>
+    <nav class="nav-links">
+      <a href="https://instagram.com/sellravo"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@sellravo"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://x.com/sellravo"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://www.ebay.com/usr/sellravo"><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="mailto:info@sellravo.store"><i class="fa-solid fa-circle-question"></i></a>
     </nav>
 
     <div class="card">
       <div class="badge">Explore ↗</div>
 
-      <a href="https://sellravo.store/experience" aria-label="Enter Sellravo experience page">
-        <img
-          src="https://sellravo.store/sellravo-img.png"
-          alt="Sellravo logo and tagline"
-          class="logo"
-        />
+      <a href="https://sellravo.store/experience">
+        <img src="https://sellravo.store/sellravo-img.png" class="logo" />
       </a>
 
       <div class="tagline">Elevate your experience</div>
       <div class="subtagline">Great finds, honest details, and shipping done right.</div>
 
-      <!-- Text link helps SEO + accessibility -->
       <a href="https://sellravo.store/experience" class="primary-link">
         Learn more about Sellravo →
       </a>
 
-      <!-- Telegram button -->
-      <a href="https://t.me/sellravo" target="_blank" class="telegram-btn">
+      <!-- NEW BUTTON ADDED HERE (Send a Message) -->
+      <a href="https://t.me/sellravo" target="_blank" class="telegram-pill">
         <i class="fa-brands fa-telegram"></i>
         Send a Message
       </a>
+
     </div>
 
     <div class="footer">
