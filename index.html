@@ -94,7 +94,7 @@
       letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--text-muted);
-      margin-bottom: 10px; /* slightly tighter */
+      margin-bottom: 10px;
     }
 
     .logo {
@@ -112,7 +112,7 @@
     }
 
     .tagline {
-      margin-top: 14px; /* moved up a bit */
+      margin-top: 14px;
       font-size: 26px;
       font-weight: 700;
       letter-spacing: 0.02em;
@@ -123,14 +123,14 @@
     }
 
     .subtagline {
-      margin-top: 4px; /* tighter */
+      margin-top: 4px;
       font-size: 14px;
       color: var(--text-muted);
     }
 
     /* Text link for accessibility / SEO */
     .primary-link {
-      margin-top: 10px; /* tighter */
+      margin-top: 10px;
       font-size: 13px;
       color: var(--accent-blue);
       text-decoration: none;
@@ -138,6 +138,39 @@
 
     .primary-link:hover {
       text-decoration: underline;
+    }
+
+    /* Telegram button */
+    .telegram-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      margin-top: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-main);
+      background: #f3f6ff;
+      border: 1px solid #d5ddf7;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .telegram-btn i {
+      color: #2AABEE; /* Telegram blue */
+      font-size: 16px;
+      transition: color 0.25s ease;
+    }
+
+    .telegram-btn:hover {
+      background: #2AABEE;
+      border-color: #2AABEE;
+      color: #ffffff;
+    }
+
+    .telegram-btn:hover i {
+      color: #ffffff;
     }
 
     /* Footer */
@@ -205,34 +238,11 @@
         Learn more about Sellravo →
       </a>
 
-      <!-- Minimal Telegram box inside card -->
-      <div style="
-        margin-top: 18px;
-        padding: 10px 14px;
-        background: #ffffff;
-        border-radius: 14px;
-        box-shadow: 0 4px 14px rgba(15,23,42,0.12);
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 13px;
-        width: 78%;
-        max-width: 320px;
-      ">
-        <i class="fa-brands fa-telegram" style="color: var(--accent-blue); font-size: 16px;"></i>
-        <span style="color: var(--text-main);">Message on Telegram</span>
-        <a href="https://t.me/sellravo" target="_blank" style="
-          margin-left: auto;
-          padding: 6px 12px;
-          border-radius: 10px;
-          font-size: 12px;
-          font-weight: 600;
-          background: linear-gradient(135deg, var(--accent-pink), var(--accent-blue));
-          color: #ffffff;
-          text-decoration: none;
-          white-space: nowrap;
-        ">Join →</a>
-      </div>
+      <!-- Telegram button -->
+      <a href="https://t.me/sellravo" target="_blank" class="telegram-btn">
+        <i class="fa-brands fa-telegram"></i>
+        Send a Message
+      </a>
     </div>
 
     <div class="footer">
