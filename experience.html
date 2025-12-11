@@ -27,6 +27,7 @@
     :root {
       --accent-pink: #ec4899;
       --accent-blue: #6366f1;
+      --telegram-blue: #2AABEE;
       --text-main: #0f172a;
       --text-muted: #6b7280;
     }
@@ -140,6 +141,39 @@
       text-decoration: underline;
     }
 
+    /* Telegram pill button (Send a Message) */
+    .telegram-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      margin-top: 14px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-main);
+      background: #eaf1ff;
+      border: 1px solid #d3dcf7;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .telegram-pill i {
+      font-size: 17px;
+      color: var(--telegram-blue);
+      transition: color 0.25s ease;
+    }
+
+    .telegram-pill:hover {
+      background: var(--telegram-blue);
+      border-color: var(--telegram-blue);
+      color: #ffffff;
+    }
+
+    .telegram-pill:hover i {
+      color: #ffffff;
+    }
+
     /* Footer */
     .footer {
       margin-top: 20px;
@@ -205,41 +239,11 @@
         Learn more about Sellravo →
       </a>
 
-      <!-- Minimal Telegram box inside card -->
-      <div style="
-        margin-top: 12px;
-        padding: 10px 14px;
-        background: #ffffff;
-        border-radius: 14px;
-        box-shadow: 0 4px 14px rgba(15,23,42,0.12);
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 13px;
-        width: 100%;
-        max-width: 320px;
-      ">
-        <i class="fa-brands fa-telegram" style="color: var(--accent-blue); font-size: 16px;"></i>
-        <span style="color: var(--text-main); white-space: nowrap;">
-          Message on Telegram
-        </span>
-        <a href="https://t.me/sellravo" target="_blank" style="
-          margin-left: auto;
-          padding: 8px 14px;
-          border-radius: 10px;
-          font-size: 12px;
-          font-weight: 600;
-          background: linear-gradient(135deg, var(--accent-pink), var(--accent-blue));
-          color: #ffffff;
-          text-decoration: none;
-          white-space: nowrap;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        ">
-          Join →
-        </a>
-      </div>
+      <!-- Telegram "Send a Message" button -->
+      <a href="https://t.me/sellravo" target="_blank" class="telegram-pill">
+        <i class="fa-brands fa-telegram"></i>
+        Send a Message
+      </a>
     </div>
 
     <div class="footer">
