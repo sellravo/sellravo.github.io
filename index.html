@@ -82,7 +82,6 @@
       box-shadow: 0 18px 45px rgba(15, 23, 42, 0.22);
       backdrop-filter: blur(10px);
       transition: transform 0.22s ease, box-shadow 0.22s ease;
-      position: relative; /* so the Telegram bar can be absolutely positioned */
     }
 
     .card:hover {
@@ -95,7 +94,7 @@
       letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--text-muted);
-      margin-bottom: 14px;
+      margin-bottom: 10px; /* slightly tighter */
     }
 
     .logo {
@@ -113,7 +112,7 @@
     }
 
     .tagline {
-      margin-top: 20px;
+      margin-top: 14px; /* moved up a bit */
       font-size: 26px;
       font-weight: 700;
       letter-spacing: 0.02em;
@@ -124,14 +123,14 @@
     }
 
     .subtagline {
-      margin-top: 6px;
+      margin-top: 4px; /* tighter */
       font-size: 14px;
       color: var(--text-muted);
     }
 
     /* Text link for accessibility / SEO */
     .primary-link {
-      margin-top: 14px;
+      margin-top: 10px; /* tighter */
       font-size: 13px;
       color: var(--accent-blue);
       text-decoration: none;
@@ -206,27 +205,26 @@
         Learn more about Sellravo →
       </a>
 
-      <!-- Minimal Telegram box inside card, not affecting card height -->
+      <!-- Minimal Telegram box inside card -->
       <div style="
-        position: absolute;
-        bottom: 28px;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 12px 18px;
+        margin-top: 12px;
+        padding: 10px 14px;
         background: #ffffff;
-        border-radius: 999px;
+        border-radius: 14px;
         box-shadow: 0 4px 14px rgba(15,23,42,0.12);
         display: flex;
         align-items: center;
         gap: 10px;
         font-size: 13px;
+        width: 100%;
+        max-width: 320px;
       ">
         <i class="fa-brands fa-telegram" style="color: var(--accent-blue); font-size: 16px;"></i>
         <span style="color: var(--text-main);">Join our Telegram Channel</span>
         <a href="https://t.me/sellravo" target="_blank" style="
           margin-left: auto;
           padding: 6px 12px;
-          border-radius: 999px;
+          border-radius: 10px;
           font-size: 12px;
           font-weight: 600;
           background: linear-gradient(135deg, var(--accent-pink), var(--accent-blue));
