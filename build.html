@@ -1,49 +1,50 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Sellravo • Trusted finds & smart deals</title>
+  <title>Privacy & Terms • Sellravo</title>
 
   <!-- Basic SEO -->
   <meta
     name="description"
-    content="Sellravo offers unique items and smart deals, with fair prices, dependable shipping, and friendly customer support."
+    content="Read Sellravo’s privacy policy and terms of use, including how we handle information and the rules for using this website."
   />
   <meta
     name="keywords"
-    content="trusted finds, smart deals, unique items, online store, fair prices, dependable shipping, friendly customer support, Sellravo"
+    content="Sellravo privacy policy, Sellravo terms of use, website terms, data handling, customer information, online store policies, privacy and terms"
   />
   <meta name="robots" content="index,follow" />
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://sellravo.store/experience" />
+  <link rel="canonical" href="https://sellravo.store/legal" />
 
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="Sellravo • Trusted finds & smart deals" />
-  <meta property="og:description" content="Great finds, honest details, and shipping done right." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Privacy & Terms • Sellravo" />
+  <meta property="og:description" content="Privacy policy and terms of use for Sellravo customers and site visitors." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sellravo.store/experience" />
+  <meta property="og:url" content="https://sellravo.store/legal" />
   <meta property="og:image" content="https://sellravo.store/sellravo-img.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sellravo • Trusted finds & smart deals" />
-  <meta name="twitter:description" content="Quality products and smart deals with fair prices, reliable shipping, and friendly customer support from Sellravo." />
+  <meta name="twitter:title" content="Privacy & Terms • Sellravo" />
+  <meta name="twitter:description" content="How Sellravo handles information and the rules for using this site." />
   <meta name="twitter:image" content="https://sellravo.store/sellravo-img.png" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="https://sellravo.store/favico.ico" />
   <link rel="shortcut icon" type="image/x-icon" href="https://sellravo.store/favico.ico" />
 
-  <!-- Styles -->
+  <!-- Styles (same base style as other pages) -->
   <style>
     :root {
       --bg-light: #f5f7fb;
+      --bg-dark: #0b1020;
       --accent-pink: #ec4899;
-      --accent-blue: #6366f1;
-      --telegram-blue: #2AABEE;
+      --accent-navy: #111827;
       --text-main: #0f172a;
       --text-muted: #6b7280;
       --card: #ffffff;
@@ -78,7 +79,7 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 56px;
+      gap: 40px;
     }
 
     /* Visually hidden heading for SEO */
@@ -108,8 +109,8 @@
     }
 
     .brand-logo {
-      width: 28px;
-      height: 28px;
+      width: 27px;
+      height: 27px;
       object-fit: contain;
     }
 
@@ -121,37 +122,41 @@
       color: #111827;
     }
 
-    /* Top minimal nav with icons */
     .nav-links {
       display: flex;
-      justify-content: center;
-      gap: 14px;
-      font-size: 18px;
+      gap: 18px;
+      font-size: 14px;
       color: var(--text-muted);
+      align-items: center;
     }
 
     .nav-links a {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      color: var(--text-muted);
-      transition: transform 0.18s ease, color 0.18s ease;
     }
 
     .nav-links a:hover {
-      transform: translateY(-1px);
-      color: var(--accent-blue);
+      color: #111827;
     }
 
-    /* Hero */
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-      gap: 32px;
-      align-items: center;
+    .nav-text-link {
+      font-size: 13px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      margin-right: 8px;
     }
 
-    .hero-pill {
+    .nav-text-link:hover {
+      background: rgba(148, 163, 184, 0.1);
+    }
+
+    .page-title-block {
+      padding-top: 8px;
+    }
+
+    .page-label {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -162,144 +167,21 @@
       letter-spacing: 0.16em;
       background: rgba(15, 23, 42, 0.06);
       color: #4b5563;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
-    .hero-pill .dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: #22c55e;
-    }
-
-    .hero-title {
-      font-size: clamp(32px, 5vw, 44px);
-      margin-bottom: 12px;
+    .page-title {
+      font-size: clamp(26px, 3.4vw, 32px);
+      font-weight: 700;
       color: #020617;
-      line-height: 1.12;
+      margin-bottom: 6px;
     }
 
-    .hero-highlight {
-      background: linear-gradient(135deg, var(--accent-pink), var(--accent-blue));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .hero-text {
-      font-size: 15px;
-      max-width: 460px;
-      line-height: 1.6;
+    .page-subtitle {
+      font-size: 14px;
       color: var(--text-muted);
-      margin-bottom: 20px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-
-    .btn-primary {
-      padding: 10px 20px;
-      border-radius: 999px;
-      border: none;
-      background: linear-gradient(135deg, var(--accent-pink), var(--accent-blue));
-      color: #f9fafb;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 10px 30px rgba(79, 70, 229, 0.35);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 40px rgba(79, 70, 229, 0.45);
-    }
-
-    /* Telegram ghost button */
-    .btn-ghost {
-      padding: 9px 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.8);
-      font-size: 14px;
-      color: #374151;
-      background: rgba(255, 255, 255, 0.85);
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.25s ease;
-    }
-
-    .btn-ghost i {
-      font-size: 16px;
-      color: var(--telegram-blue);
-      transition: color 0.25s ease;
-    }
-
-    .btn-ghost:hover {
-      background: var(--telegram-blue);
-      border-color: var(--telegram-blue);
-      color: #ffffff;
-    }
-
-    .btn-ghost:hover i {
-      color: #ffffff;
-    }
-
-    .hero-note {
-      font-size: 12px;
-      color: #9ca3af;
-    }
-
-    .hero-card {
-      background: radial-gradient(circle at top, #fdf2ff 0, #ffffff 40%, #e5edf8 100%);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-lg);
-      padding: 26px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-orbit {
-      position: absolute;
-      inset: -80px;
-      background:
-        radial-gradient(circle at 15% 0, rgba(236, 72, 153, 0.35), transparent 55%),
-        radial-gradient(circle at 85% 100%, rgba(59, 130, 246, 0.28), transparent 55%);
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
-
-    .hero-card:hover .hero-orbit {
-      opacity: 1;
-    }
-
-    .logo-main {
-      width: 200px;
-      height: auto;
-      position: relative;
-      z-index: 2;
-      filter: drop-shadow(0 6px 15px rgba(0, 0, 0, 0.18));
-      transition: transform 0.25s ease, filter 0.25s ease;
-    }
-
-    .hero-card:hover .logo-main {
-      transform: scale(1.05);
-      filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.28));
-    }
-
-    .hero-tagline {
-      margin-top: 14px;
-      font-size: 14px;
-      color: #4b5563;
+      max-width: 620px;
+      line-height: 1.6;
     }
 
     section {
@@ -311,45 +193,29 @@
 
     .section-title {
       font-size: 18px;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       font-weight: 600;
     }
 
     .section-text {
       font-size: 15px;
-      line-height: 1.6;
       color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 10px;
     }
 
-    .why-list span {
-      display: inline-block;
-      transition: color 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
-      opacity: 0.9;
-    }
-
-    .why-list span:hover {
-      color: #111827;
-      transform: translateX(2px);
-      opacity: 1;
-    }
-
-    .info-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin-top: 12px;
-    }
-
-    .info-link {
+    ul {
+      margin-left: 18px;
+      margin-top: 4px;
+      color: var(--text-muted);
       font-size: 14px;
-      color: #1f2937;
-      border-bottom: 1px solid #e5e7eb;
-      padding-bottom: 2px;
+      line-height: 1.6;
     }
 
-    .info-link:hover {
-      color: #111827;
-      border-bottom-color: #9ca3b8;
+    .muted-note {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-top: 12px;
     }
 
     footer {
@@ -362,26 +228,12 @@
     @media (max-width: 768px) {
       .page {
         padding: 20px 14px 48px;
-        gap: 40px;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-
-      .hero-card {
-        margin-top: 4px;
-        padding: 22px;
-      }
-
-      .logo-main {
-        width: 160px;
+        gap: 32px;
       }
     }
   </style>
 
-  <!-- Font Awesome for nav icons -->
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -395,7 +247,7 @@
     "name": "Sellravo",
     "url": "https://sellravo.store",
     "logo": "https://sellravo.store/sellravo-img.png",
-    "description": "Sellravo offers quality products and smart deals with clear photos, fair prices, and fast, reliable shipping.",
+    "description": "Sellravo provides trusted finds and smart deals, with clear information, fair prices, and reliable shipping.",
     "email": "info@sellravo.store",
     "sameAs": [
       "https://www.ebay.com/usr/sellravo",
@@ -410,22 +262,23 @@
 
 <body>
   <div class="page">
+
     <!-- Hidden H1 for SEO, not visible to users -->
     <h1 class="sr-only">
-      Sellravo — trusted finds, smart deals, unique items, fair prices, dependable shipping, and friendly customer support.
+      Sellravo Privacy Policy and Terms of Use — how we handle information and the rules for using this website.
     </h1>
 
     <header>
       <div class="brand">
-        <img
-          src="https://sellravo.store/sellravo-logo.png"
-          alt="Sellravo logo"
-          class="brand-logo"
-        />
+        <img src="https://sellravo.store/sellravo-logo.png"
+             alt="Sellravo logo"
+             class="brand-logo" />
         <div class="brand-name">Explore Sellravo</div>
       </div>
 
-      <nav class="nav-links" aria-label="Sellravo social and contact links">
+      <nav class="nav-links" aria-label="Sellravo navigation and social links">
+        <a href="/experience" class="nav-text-link">Experience</a>
+
         <a href="https://instagram.com/sellravo" aria-label="Sellravo on Instagram" target="_blank" rel="noopener noreferrer">
           <i class="fa-brands fa-instagram"></i>
         </a>
@@ -438,105 +291,206 @@
         <a href="https://www.ebay.com/usr/sellravo" aria-label="Sellravo eBay store" target="_blank" rel="noopener noreferrer">
           <i class="fa-solid fa-cart-shopping"></i>
         </a>
-        <a href="mailto:info@sellravo.store" aria-label="Contact Sellravo by email">
-          <i class="fa-solid fa-circle-question"></i>
-        </a>
       </nav>
     </header>
 
-    <main class="hero">
-      <div>
-        <div class="hero-pill">
-          <span class="dot"></span> Trusted Online Finds
-        </div>
-
-        <h1 class="hero-title">
-          Curated <span class="hero-highlight">selections</span><br />
-          and smart deals,<br />
-          brought to you by Sellravo.
-        </h1>
-
-        <p class="hero-text">
-          From rare finds to everyday essentials, Sellravo is your home for
-          hand-picked items with real value. Simple listings and fast shipping.
-        </p>
-
-        <div class="hero-actions">
-          <a href="https://www.ebay.com/usr/sellravo" target="_blank" rel="noopener noreferrer">
-            <button class="btn-primary">Visit eBay Store ↗</button>
-          </a>
-
-          <!-- Telegram-style Send a Message button -->
-          <a href="https://t.me/sellravo" target="_blank" rel="noopener noreferrer">
-            <button class="btn-ghost">
-              <i class="fa-brands fa-telegram"></i>
-              Send a Message
-            </button>
-          </a>
-        </div>
-
-        <p class="hero-note">Where your dreams begin.</p>
-      </div>
-
-      <div class="hero-card">
-        <div class="hero-orbit"></div>
-        <img
-          src="https://sellravo.store/sellravo-img.png"
-          class="logo-main"
-          alt="Sellravo logo with tagline Where your dreams begin"
-        />
-        <div class="hero-tagline">Thoughtful finds. Honest prices.</div>
-      </div>
-    </main>
-
-    <section id="about">
-      <h2 class="section-title">About Sellravo</h2>
-      <p class="section-text">
-        Sellravo was built on a commitment to offering great products with clarity, fairness,
-        and reliable service. What started as a simple idea has grown into a professionally
-        managed marketplace where every item is thoughtfully selected, accurately described,
-        competitively priced, and shipped with consistent care.
+    <div class="page-title-block">
+      <div class="page-label">Legal</div>
+      <h1 class="page-title">Privacy &amp; Terms</h1>
+      <p class="page-subtitle">
+        An overview of how Sellravo handles information and the basic rules for using this site
+        and purchasing from us through marketplace platforms.
       </p>
-      <!-- Small, minimalist credibility line -->
-      <p class="section-text" style="margin-top: 10px; font-size: 13px; color: #9ca3af;">
-        Checked, packed with care, and shipped with tracking every time.
-      </p>
-    </section>
-
-    <section id="why">
-      <h2 class="section-title">Why people buy from Sellravo</h2>
-      <p class="section-text why-list">
-        <span>• Clear photos and straightforward descriptions</span><br />
-        <span>• Reliable, secure packaging and shipping</span><br />
-        <span>• Fair pricing and friendly, real support</span>
-      </p>
-    </section>
-
-    <section id="shop">
-      <h2 class="section-title">Shop Sellravo on eBay</h2>
-      <p class="section-text">
-        Discover fresh finds and carefully selected products.
-      </p>
-      <br />
-      <a href="https://www.ebay.com/usr/sellravo" target="_blank" rel="noopener noreferrer">
-        <button class="btn-primary">Open eBay Store ↗</button>
-      </a>
-    </section>
-
-    <section id="more-info">
-      <h2 class="section-title">More about Sellravo</h2>
-      <p class="section-text">
-        Learn about our policies and how we support you.
-      </p>
-      <div class="info-links">
-        <a href="/contact" class="info-link">Contact &amp; Business Info</a>
-        <a href="/policies" class="info-link">Shipping &amp; Returns</a>
-        <a href="/legal" class="info-link">Privacy &amp; Terms</a>
-      </div>
-    </section>
-
-    <div class="footer">
     </div>
+
+    <!-- Privacy Policy -->
+    <section>
+      <h2 class="section-title">Privacy Policy</h2>
+
+      <p class="section-text">
+        We respect your privacy. This policy explains, in plain language, what information we handle
+        and how we use it.
+      </p>
+
+      <p class="section-text"><strong>What this covers</strong></p>
+      <ul>
+        <li>Visits to this website (sellravo.store).</li>
+        <li>Messages you send directly to Sellravo by email or through marketplace platforms.</li>
+        <li>Order information we receive from marketplaces such as eBay.</li>
+      </ul>
+
+      <p class="section-text"><strong>Information we may receive</strong></p>
+      <ul>
+        <li>Contact details you choose to share (name, email address, mailing address, phone number).</li>
+        <li>Order details from the marketplace (items purchased, prices, shipment information).</li>
+        <li>
+          Basic technical information from our hosting provider (such as IP address and browser type)
+          stored in standard server logs.
+        </li>
+      </ul>
+
+      <p class="section-text"><strong>How we use your information</strong></p>
+      <ul>
+        <li>To prepare, ship, and support your orders.</li>
+        <li>To respond to questions, requests, and return inquiries.</li>
+        <li>For internal record-keeping, accounting, and fraud-prevention checks.</li>
+        <li>To improve how we present and describe products.</li>
+      </ul>
+
+      <p class="section-text"><strong>Sharing of information</strong></p>
+      <ul>
+        <li>
+          We share information only with service providers needed to complete your order, such as
+          shipping carriers and marketplace payment processors.
+        </li>
+        <li>
+          We do not sell or rent your personal contact information to third parties for marketing.
+        </li>
+        <li>
+          Your payment details are processed by the marketplace or payment provider; Sellravo does not
+          store full credit card numbers on this site.
+        </li>
+      </ul>
+
+      <p class="section-text"><strong>Cookies and tracking</strong></p>
+      <ul>
+        <li>
+          This site uses only basic, functional cookies and hosting-level logs needed to operate the
+          website securely.
+        </li>
+        <li>
+          We do not run personalized advertising or third-party marketing trackers on this site.
+        </li>
+      </ul>
+
+      <p class="section-text"><strong>Data retention</strong></p>
+      <ul>
+        <li>
+          We keep order records and related messages for as long as reasonably needed for support,
+          accounting, and legal record-keeping.
+        </li>
+        <li>
+          If you contact us about your information, we will review and, where appropriate, update or
+          delete it, subject to any legal or tax requirements.
+        </li>
+      </ul>
+
+      <p class="section-text"><strong>Your choices</strong></p>
+      <ul>
+        <li>You can email us at <a href="mailto:info@sellravo.store">info@sellravo.store</a> with privacy questions.</li>
+        <li>
+          For information held by a marketplace (such as eBay), you can also manage your privacy
+          settings directly through that platform.
+        </li>
+      </ul>
+
+      <p class="muted-note">Last updated: December 2025. This summary is for general information and is not legal advice.</p>
+    </section>
+
+    <!-- Terms of Use -->
+    <section>
+      <h2 class="section-title">Terms of Use</h2>
+
+      <p class="section-text">
+        By using this website (“Site”) and/or buying from Sellravo through marketplace platforms,
+        you agree to the terms below.
+      </p>
+
+      <p class="section-text"><strong>General use</strong></p>
+      <ul>
+        <li>
+          This Site is provided for general information about Sellravo and to link you to our
+          marketplace listings.
+        </li>
+        <li>You should be at least 18 years old, or use the Site under the supervision of an adult.</li>
+        <li>
+          We may update or remove content at any time, and access to the Site may be temporarily
+          unavailable due to maintenance or technical issues.
+        </li>
+      </ul>
+
+      <p class="section-text"><strong>Product descriptions &amp; pricing</strong></p>
+      <ul>
+        <li>
+          We aim for clear photos and honest descriptions. Minor variations in color or packaging may
+          occur.
+        </li>
+        <li>
+          Prices, fees, and shipping costs shown on marketplace platforms apply at the time of purchase
+          and may change without notice.
+        </li>
+        <li>
+          If there is an obvious pricing or listing error, we may cancel the order and issue a refund
+          through the marketplace.
+        </li>
+      </ul>
+
+      <p class="section-text"><strong>Orders, shipping &amp; returns</strong></p>
+      <ul>
+        <li>
+          Orders are processed once payment is confirmed on the marketplace. Availability is not
+          guaranteed until that point.
+        </li>
+        <li>
+          Shipping, handling times, and return practices follow our
+          <a href="/policies">Shipping &amp; Returns</a> page and the rules of the marketplace where
+          the order was placed.
+        </li>
+      </ul>
+
+      <p class="section-text"><strong>Acceptable use</strong></p>
+      <ul>
+        <li>
+          You agree not to use this Site for any unlawful purpose, or to attempt to interfere with the
+          security or normal operation of the Site.
+        </li>
+        <li>
+          You agree to provide accurate information when communicating with us or placing an order.
+        </li>
+      </ul>
+
+      <p class="section-text"><strong>Intellectual property</strong></p>
+      <ul>
+        <li>
+          The Sellravo name, logo, and original content on this Site (text and images) are owned by
+          Sellravo and may not be reused without permission, except where allowed by law.
+        </li>
+      </ul>
+
+      <p class="section-text"><strong>Limitation of liability</strong></p>
+      <ul>
+        <li>
+          To the fullest extent permitted by law, Sellravo is not liable for any indirect or
+          consequential losses arising from the use of this Site or from marketplace transactions.
+        </li>
+        <li>
+          If we are found responsible for an issue with an item, our liability is generally limited to
+          correcting the problem or refunding up to the purchase price of that item.
+        </li>
+      </ul>
+
+      <p class="section-text"><strong>Governing law</strong></p>
+      <ul>
+        <li>
+          These terms are governed by the laws of the Commonwealth of Massachusetts, United States,
+          without regard to conflict-of-law principles.
+        </li>
+      </ul>
+
+      <p class="section-text"><strong>Changes to this page</strong></p>
+      <ul>
+        <li>
+          We may update these Privacy &amp; Terms from time to time. When we do, the “Last updated”
+          date above will change, and the new version will apply going forward.
+        </li>
+      </ul>
+
+      <p class="muted-note">
+        If you have questions about these policies, please contact us at
+        <a href="mailto:info@sellravo.store">info@sellravo.store</a>.
+      </p>
+    </section>
+
   </div>
 
   <footer>
@@ -548,3 +502,4 @@
   </script>
 </body>
 </html>
+```
